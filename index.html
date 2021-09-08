@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--GOAL: Create virtual Russian keyboard.-->
+<!--Can be used by clicking, or by typing.-->
+<!--Let's go...-->
+<head>
+    <title>Type in Russian!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="icon" href="Буква Я.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+    
+    <h1>Virtual Russian Keyboard</h1>
+
+    <div id="content">
+        <div id="instructions">
+            <h2>How to Use:</h2>
+            <p>This keyboard was designed for English keyboard users. the character/symbol displayed in the top right corner of each on-screen key corresponds to the large Russian character.</p>
+            <p>Click a key on the virtual keyboard using your mouse, <strong>OR</strong> press the corresponding character on your keyboard!</p>        
+        </div>
+    </div>
+    <div id="inputTextWrapper">
+        <textarea id="inputTextField" class="textBox"></textarea>
+        <p class="capsWarning" style="display: none"><strong>CAPS Lock is on!</strong></p> <!--Broken Feature-->
+    </div>
+
+   
+    <div class="keyboardFooter">
+        <div class="keyboardWrapper">
+            <div class="keyboard">
+                <div id="row1" class="keyboardRow">
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Й</div>
+                            <div class="secondary">q</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ц</div>
+                            <div class="secondary">w</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">У</div>
+                            <div class="secondary">e</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">К</div>
+                            <div class="secondary">r</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Е</div>
+                            <div class="secondary">t</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Н</div>
+                            <div class="secondary">y</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Г</div>
+                            <div class="secondary">u</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ш</div>
+                            <div class="secondary">i</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Щ</div>
+                            <div class="secondary">o</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">З</div>
+                            <div class="secondary">p</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Х</div>
+                            <div class="secondary">[</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ъ</div>
+                            <div class="secondary">]</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ё</div>
+                            <div class="secondary">\</div>
+                        </div>
+                    </button>
+                </div>
+                <div id="row2" class="keyboardRow">
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ф</div>
+                            <div class="secondary">a</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ы</div>
+                            <div class="secondary">s</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">В</div>
+                            <div class="secondary">d</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">А</div>
+                            <div class="secondary">f</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">П</div>
+                            <div class="secondary">g</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Р</div>
+                            <div class="secondary">h</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">О</div>
+                            <div class="secondary">j</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Л</div>
+                            <div class="secondary">k</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Д</div>
+                            <div class="secondary">l</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ж</div>
+                            <div class="secondary">;</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Э</div>
+                            <div class="secondary">'</div>
+                        </div>
+                    </button>
+                </div>
+                <div id="row3" class="keyboardRow">
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Я</div>
+                            <div class="secondary">z</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ч</div>
+                            <div class="secondary">x</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">С</div>
+                            <div class="secondary">c</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">М</div>
+                            <div class="secondary">v</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">И</div>
+                            <div class="secondary">b</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Т</div>
+                            <div class="secondary">n</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ь</div>
+                            <div class="secondary">m</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Б</div>
+                            <div class="secondary">,</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyLetter">
+                        <div class="buttonFlexWrapper">
+                            <div class="primary">Ю</div>
+                            <div class="secondary">.</div>
+                        </div>
+                    </button>
+                    <button type="button" class="key keyWide"> 
+                        <i class="material-icons">backspace</i>
+                    </button>
+                </div>
+                <div id="row4" class="keyboardRow">
+
+                    <button type="button" class="key keyWide capsLock">
+                        <i class="material-icons">keyboard_capslock</i>
+                        <div class="keyLight"></div>
+                    </button>
+
+                    <button type="button" class="key keyXWide">
+                        <i class="material-icons">space_bar</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="javascript" src="logic.js"></script>
+</body>

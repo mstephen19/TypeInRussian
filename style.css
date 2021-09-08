@@ -1,0 +1,195 @@
+/*Body*/
+h1 {
+    margin: 3px;
+    padding: 3px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: rgb(233, 188, 188)
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#instructions {
+    display: flex;
+    flex-direction: column; 
+}
+
+#instructions > h2 {
+    margin: 2px;
+    padding: 2px;
+}
+
+#instructions > p {
+    margin: 3px;
+    padding: 3px;
+}
+
+#inputTextWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    top: 50px;
+}
+
+#instructions{
+    width: 50%;
+}
+
+#inputTextField {
+    width: 80%;
+    min-width: 800px;
+    max-width: 1000px;
+    border-radius: 8px;
+    border: none;
+}
+
+textarea#inputTextField {
+    resize: none;
+    min-height: 100px;
+    height: auto;
+    box-shadow: inset 0 0 3px black;
+    padding: 1px;
+}
+
+.capsWarning {
+    top: 50px;
+    padding: 1px;
+}
+
+/* Keyboard */
+button {
+    padding: 0;
+    margin: 1.5px;
+    height: 45px;
+    min-width: 22.5px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.70)
+}
+
+button:active {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+button.keyLetter {
+    width: 6%;
+    max-width: 45px;
+}
+
+button.keyWide {
+   width: 13%;
+   max-width: 125px;
+}
+
+button.keyXWide {
+   width: 45%;
+   max-width: 400px;
+}
+
+.keyboardFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    background: rgb(238, 94, 94);
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.45s linear;
+    height: 200px;
+}
+
+.keyboardHide {
+    bottom: -100%;
+}
+
+.keyboardWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+}
+
+.keyboard {
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 4px;
+}
+
+.keyboardRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonFlexWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary {
+    display: flex;
+    width: 75%;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.secondary {
+    display: flex;
+    width: 25%;
+    height: 45px;
+    justify-content: flex-end | center;
+    align-items: flex-end | center;
+}
+
+/* Mobile Overrides */
+@media only screen and (max-width: 599px) {
+    #content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #instructions, #inputText { 
+        width: 100%;
+    }
+  
+    #inputTextField {
+        width: 80%;
+        min-width: 325px;
+        max-width: 350px;
+    }
+
+  .keyboard {
+      width: 100%;
+    }
+    
+    .primary {
+        justify-content: center;
+        align-items: center;
+    }
+
+  .secondary {
+    justify-content: left;
+    align-items: left;
+    }
+}
